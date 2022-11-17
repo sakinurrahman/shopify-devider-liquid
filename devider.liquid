@@ -1,5 +1,23 @@
-<div style="padding-top: {{ section.settings.pad-top }}; padding-bottom: {{ section.settings.pad-bottom }};"></div>
+<div class="devider_{{ section.id }}"></div>
 
+
+<style>
+.devider_{{ section.id }} {
+  padding-top: {{ section.settings.pad-top }};
+  display:block;
+  padding-bottom: {{ section.settings.pad-bot }};
+}
+
+@media only screen and ( max-width: 991px ) {
+  .devider_{{ section.id }} {
+    padding-top: {{ section.settings.pad-topm }};
+    display:block;
+    padding-bottom: {{ section.settings.pad-botm }};
+}
+
+}
+  
+</style>
 
 {% schema %}
   {
@@ -16,6 +34,18 @@
         "id": "pad-bot",
         "label": "Space Bottom",
         "default": "35px"
+      },
+       {
+        "type": "text",
+        "id": "pad-topm",
+        "label": "Space Top Mobile",
+        "default": "10px"
+      },
+      {
+        "type": "text",
+        "id": "pad-botm",
+        "label": "Space Bottom Mobile",
+        "default": "10px"
       }
     ],
     "presets": [
