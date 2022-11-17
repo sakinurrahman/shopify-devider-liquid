@@ -1,0 +1,28 @@
+<div style="padding-top: {{ section.settings.pad-top }}; padding-bottom: {{ section.settings.pad-bottom }};"></div>
+
+
+{% schema %}
+  {
+    "name": "Devider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "pad-top",
+        "label": "Space Top",
+        "default": "35px"
+      },
+      {
+        "type": "text",
+        "id": "pad-bot",
+        "label": "Space Bottom",
+        "default": "35px"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Devider",
+        "category": "Custom Sections"
+      }
+    ]
+  }
+{% endschema %}
